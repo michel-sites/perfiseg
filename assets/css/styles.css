@@ -4,7 +4,8 @@
   --orange-soft: #FFF2E8;
   --navy: #303D59;
   --navy-deep: #273247;
-  --graphite: #23242B;
+  --gold: #E5D384;
+  --bordeaux: #580000;
   --ink: #1B1C22;
   --white: #FDFDFD;
   --gray: #F5F5F5;
@@ -86,7 +87,7 @@ button {
 
 ::selection {
   background: rgba(246, 116, 28, .22);
-  color: var(--graphite);
+  color: var(--ink);
 }
 
 :focus-visible {
@@ -169,6 +170,14 @@ button {
   background: #FFB27D;
 }
 
+.section-cta .eyebrow-light {
+  color: var(--gold);
+}
+
+.section-cta .eyebrow-light::before {
+  background: var(--gold);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -249,6 +258,17 @@ button {
   color: var(--orange-600);
 }
 
+.btn-outline-gold {
+  border-color: rgba(229, 211, 132, .55);
+  color: var(--gold);
+}
+
+.btn-outline-gold:hover {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--bordeaux);
+}
+
 .btn-sm {
   padding: 12px 20px;
   font-size: .79rem;
@@ -314,16 +334,14 @@ button {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(253, 253, 253, .95);
-  border-bottom: 1px solid rgba(35, 36, 43, .06);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: var(--bordeaux);
+  border-bottom: 1px solid rgba(229, 211, 132, .18);
   transition: box-shadow .35s var(--ease), border-color .35s var(--ease);
 }
 
 .site-header.is-scrolled {
-  border-color: transparent;
-  box-shadow: 0 14px 34px -24px rgba(35, 36, 43, .45);
+  border-color: rgba(229, 211, 132, .24);
+  box-shadow: 0 18px 40px -24px rgba(0, 0, 0, .55);
 }
 
 .header-inner {
@@ -341,42 +359,18 @@ button {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
   flex-shrink: 0;
   color: var(--navy);
 }
 
-.brand-mark {
-  width: 37px;
-  height: 41px;
-  transition: width .35s var(--ease), height .35s var(--ease);
+.brand-logo {
+  height: 50px;
+  width: auto;
+  transition: height .35s var(--ease);
 }
 
-.site-header.is-scrolled .brand-mark {
-  width: 34px;
-  height: 38px;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.brand-name {
-  color: inherit;
-  font-size: 1.3rem;
-  font-weight: 800;
-  letter-spacing: -.02em;
-}
-
-.brand-sub {
-  margin-top: 6px;
-  color: #8A93A2;
-  font-size: .52rem;
-  font-weight: 600;
-  letter-spacing: .23em;
-  text-transform: uppercase;
+.site-header.is-scrolled .brand-logo {
+  height: 44px;
 }
 
 .nav {
@@ -393,7 +387,7 @@ button {
   position: relative;
   display: inline-block;
   padding: 8px 0;
-  color: #495468;
+  color: rgba(255, 255, 255, .88);
   font-size: .86rem;
   font-weight: 600;
   transition: color .25s var(--ease);
@@ -407,7 +401,7 @@ button {
   bottom: 0;
   height: 2px;
   border-radius: 2px;
-  background: var(--orange);
+  background: var(--gold);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .3s var(--ease);
@@ -415,7 +409,7 @@ button {
 
 .nav a:hover,
 .nav a.is-active {
-  color: var(--navy);
+  color: var(--gold);
 }
 
 .nav a:hover::after,
@@ -438,7 +432,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--navy);
+  color: rgba(255, 255, 255, .88);
   font-size: .78rem;
   font-weight: 700;
   transition: color .25s var(--ease);
@@ -447,11 +441,11 @@ button {
 .wa-quick .icon {
   width: 21px;
   height: 21px;
-  color: #22B35C;
+  color: var(--gold);
 }
 
 .wa-quick:hover {
-  color: var(--orange-600);
+  color: var(--gold);
 }
 
 .nav-toggle {
@@ -463,15 +457,16 @@ button {
   width: 44px;
   height: 44px;
   padding: 0;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(229, 211, 132, .35);
   border-radius: 12px;
-  background: #fff;
+  background: rgba(255, 255, 255, .06);
   cursor: pointer;
-  transition: border-color .25s var(--ease);
+  transition: border-color .25s var(--ease), background-color .25s var(--ease);
 }
 
 .nav-toggle:hover {
-  border-color: rgba(246, 116, 28, .5);
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, .1);
 }
 
 .nav-toggle span {
@@ -479,7 +474,7 @@ button {
   width: 19px;
   height: 2px;
   border-radius: 2px;
-  background: var(--navy);
+  background: var(--gold);
   transition: transform .3s var(--ease), opacity .3s var(--ease);
 }
 
@@ -1043,7 +1038,7 @@ button {
 
 .section-cta {
   overflow: hidden;
-  background: var(--graphite);
+  background: var(--bordeaux);
   color: #fff;
   text-align: center;
 }
@@ -1062,7 +1057,7 @@ button {
 
 .cta-ring {
   position: absolute;
-  border: 1px solid rgba(246, 116, 28, .16);
+  border: 1px solid rgba(229, 211, 132, .2);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1481,13 +1476,8 @@ a.contact-value:hover {
   color: #fff;
 }
 
-.brand-footer .brand-mark {
-  width: 36px;
-  height: 40px;
-}
-
-.brand-footer .brand-sub {
-  color: rgba(255, 255, 255, .46);
+.brand-footer .brand-logo {
+  height: 56px;
 }
 
 .footer-brand p {
@@ -1810,9 +1800,9 @@ a.contact-value:hover {
     place-items: center;
     width: 40px;
     height: 40px;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(229, 211, 132, .35);
     border-radius: 50%;
-    background: #fff;
+    background: rgba(255, 255, 255, .06);
   }
 
   .wa-quick .icon {
@@ -1836,9 +1826,9 @@ a.contact-value:hover {
     height: calc(100dvh - 72px);
     overflow-y: auto;
     padding: 8px clamp(20px, 5vw, 40px) 32px;
-    border-bottom: 1px solid var(--line);
-    background: var(--white);
-    box-shadow: 0 30px 50px -30px rgba(35, 36, 43, .4);
+    border-bottom: 1px solid rgba(229, 211, 132, .18);
+    background: var(--bordeaux);
+    box-shadow: 0 30px 50px -30px rgba(0, 0, 0, .6);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
@@ -1860,7 +1850,7 @@ a.contact-value:hover {
   }
 
   .nav li {
-    border-bottom: 1px solid #EFF2F6;
+    border-bottom: 1px solid rgba(229, 211, 132, .14);
   }
 
   .nav a {
@@ -1874,7 +1864,7 @@ a.contact-value:hover {
   }
 
   .nav a.is-active {
-    color: var(--orange-600);
+    color: var(--gold);
   }
 
   .nav-extra {
@@ -1996,20 +1986,9 @@ a.contact-value:hover {
     display: none;
   }
 
-  .brand-mark,
-  .site-header.is-scrolled .brand-mark {
-    width: 33px;
-    height: 37px;
-  }
-
-  .brand-name {
-    font-size: 1.16rem;
-  }
-
-  .brand-sub {
-    font-size: .46rem;
-    letter-spacing: .2em;
-    margin-top: 5px;
+  .brand-logo,
+  .site-header.is-scrolled .brand-logo {
+    height: 42px;
   }
 
   .hero {
@@ -2154,13 +2133,9 @@ a.contact-value:hover {
 }
 
 @media (max-width: 400px) {
-  .brand-name {
-    font-size: 1.08rem;
-  }
-
-  .brand-sub {
-    font-size: .43rem;
-    letter-spacing: .16em;
+  .brand-logo,
+  .site-header.is-scrolled .brand-logo {
+    height: 38px;
   }
 
   .header-actions {

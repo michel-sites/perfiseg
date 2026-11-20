@@ -5,7 +5,7 @@
   var navToggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("nav");
   var body = document.body;
-  var WHATSAPP_NUMBER = "5511999990000";
+  var WHATSAPP_NUMBER = "5544999732214";
 
   function setMenu(open) {
     body.classList.toggle("nav-open", open);
